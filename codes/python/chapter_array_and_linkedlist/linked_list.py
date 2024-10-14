@@ -30,6 +30,9 @@ def remove(n0: ListNode):
 
 def access(head: ListNode, index: int) -> ListNode | None:
     """访问链表中索引为 index 的节点"""
+    # 访问链表第 n 个节点的值 需要循环 n-1 次
+    # 访问索引为 index 的节点的值 其实就是链表中第 index+1 个节点的值 所以 需要循环 index 轮
+
     for _ in range(index):
         if not head:
             return None
